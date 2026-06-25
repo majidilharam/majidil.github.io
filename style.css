@@ -1,0 +1,130 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    color: #333;
+}
+
+.header img {
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.1)); /* Memberi efek bayangan halus pada logo */
+}
+
+.nav img {
+    object-fit: contain;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.page {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.active {
+    display: block;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    color: #0056b3;
+    margin: 5px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    width: auto;
+    padding: 8px 15px;
+}
+
+.card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+}
+
+.status-pending { color: #fd7e14; font-weight: bold; }
+.status-setuju { color: #28a745; font-weight: bold; }
+.status-tolak { color: #dc3545; font-weight: bold; }
+
+.btn-acc { background: #28a745; width: auto; padding: 5px 10px; margin-right: 5px; }
+.btn-rej { background: #dc3545; width: auto; padding: 5px 10px; }
+
+.hint { font-size: 12px; color: #777; margin-top: 15px; text-align: center; }

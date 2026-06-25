@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Cuti PT YKK AP Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- HALAMAN LOGIN -->
+    <div id="login-page" class="page active">
+        <div class="header">
+             <img src="ogp_image.jpg" alt="Logo YKK AP" style="width: 180px; margin-bottom: 20px;">
+            <h2>PT YKK AP INDONESIA</h2>
+            <p>E-Leave System</p>
+        </div>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="admin atau user">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Password bebas">
+        </div>
+        <button id="btnLogin">Login</button>
+        <p class="hint">*Login admin: <b>admin</b> | Karyawan: <b>user</b></p>
+    </div>
+
+    <!-- HALAMAN KARYAWAN -->
+    <div id="karyawan-page" class="page">
+        <div class="nav">
+            <h3>Panel Karyawan</h3>
+            <button class="btn-logout">Logout</button>
+        </div>
+        <div class="card">
+            <h4>Form Pengajuan Cuti</h4>
+            <div class="form-group">
+                <label>Nama Karyawan</label>
+                <input type="text" id="nama_karyawan" placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <label>Tanggal Mulai</label>
+                <input type="date" id="tgl_mulai">
+            </div>
+            <div class="form-group">
+                <label>Alasan</label>
+                <textarea id="alasan" rows="3" placeholder="Contoh: Urusan Keluarga"></textarea>
+            </div>
+            <button id="btnAjukan">Kirim Pengajuan</button>
+        </div>
+
+        <h4>Riwayat Cuti Saya</h4>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Alasan</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tabel-karyawan"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- HALAMAN ADMIN -->
+    <div id="admin-page" class="page">
+        <div class="nav">
+            <h3>Panel Admin HRD</h3>
+            <button class="btn-logout">Logout</button>
+        </div>
+        <h4>Daftar Masuk Pengajuan Cuti</h4>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Tanggal</th>
+                        <th>Alasan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tabel-admin"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

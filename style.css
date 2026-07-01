@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e9ecef;
+    background-color: #e8eef3;
     margin: 0;
     color: #333;
 }
@@ -23,7 +23,7 @@ body {
 
 .page {
     display: none;
-    background: white;
+    background: rgb(242, 242, 243);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -128,3 +128,133 @@ th {
 .btn-rej { background: #dc3545; width: auto; padding: 5px 10px; }
 
 .hint { font-size: 12px; color: #777; margin-top: 15px; text-align: center; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #efeff0;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.page { display: none; }
+.active { display: block; }
+
+.header { text-align: center; margin-bottom: 30px; }
+.card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
+
+.form-group { margin-bottom: 18px; }
+label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
+input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+.input-readonly { background-color: #f8f9fa; color: #666; border-color: #eee; }
+
+.row { display: flex; gap: 15px; }
+.row > .form-group { flex: 1; }
+
+/* STYLE BARU: QUOTA CARDS */
+.quota-container { display: flex; gap: 15px; }
+.quota-card { 
+    flex: 1; background: white; padding: 15px; border-radius: 12px; 
+    text-align: center; border-bottom: 4px solid #0056b3; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.quota-card.gold { border-bottom-color: #ffc107; }
+.quota-card p { margin: 0; font-size: 13px; color: #666; }
+.quota-card h2 { margin: 5px 0; color: #0056b3; font-size: 28px; }
+
+/* STYLE BARU: LEAVE TYPE SELECTOR */
+.leave-type-selector { display: flex; gap: 15px; }
+.leave-type-selector input { display: none; } /* Sembunyikan radio aslinya */
+
+.type-card {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 15px; border: 2px solid #eee; border-radius: 10px; cursor: pointer;
+    transition: 0.3s; background: white;
+}
+.type-card .icon { font-size: 20px; }
+.type-card .text { font-weight: 600; color: #555; }
+
+/* Warna saat dipilih */
+.leave-type-selector input:checked + .type-card {
+    border-color: #0056b3; background-color: #e7f1ff;
+}
+.leave-type-selector input:checked + .type-card .text { color: #0056b3; }
+
+/* BUTTONS */
+.btn-main { background-color: #0056b3; color: white; padding: 14px; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-weight: bold; font-size: 16px; transition: 0.3s; }
+.btn-main:hover { background-color: #004494; transform: translateY(-2px); }
+.btn-logout { background-color: #dc3545; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; }
+
+/* TABLES */
+.table-container { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+th { background-color: #f8f9fa; color: #666; font-size: 13px; text-transform: uppercase; }
+
+.status-pending { color: orange; font-weight: bold; }
+.status-setuju { color: green; font-weight: bold; }
+.status-tolak { color: red; font-weight: bold; }
+
+/* --- STYLE TOMBOL AKSI ADMIN --- */
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-action-acc {
+    background-color: #28a745; /* Hijau */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-action-acc:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-action-rej {
+    background-color: #dc3545; /* Merah */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-action-rej:hover {
+    background-color: #c82333;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Tambahan agar tabel lebih rapi */
+.table-container td {
+    vertical-align: middle;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-style: italic;
+}

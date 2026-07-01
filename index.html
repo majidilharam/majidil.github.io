@@ -34,21 +34,70 @@
             <h3>Panel Karyawan</h3>
             <button class="btn-logout">Logout</button>
         </div>
+
+        <!-- Tampilan Jatah Cuti (Dashboard Look) -->
+        <div id="info-jatah" style="display: none; margin-bottom: 20px;">
+            <div class="quota-container">
+                <div class="quota-card">
+                    <p>Cuti Tahunan</p>
+                    <h2 id="view-tahunan">0</h2>
+                    <small>Hari Tersisa</small>
+                </div>
+                <div class="quota-card gold">
+                    <p>Cuti Besar</p>
+                    <h2 id="view-besar">0</h2>
+                    <small>Hari Tersisa</small>
+                </div>
+            </div>
+        </div>
+
         <div class="card">
             <h4>Form Pengajuan Cuti</h4>
+            
+            <div class="form-group">
+                <label>NIK Karyawan</label>
+                <input type="text" id="nik_karyawan" placeholder="Masukkan NIK" oninput="updateDataKaryawan()">
+            </div>
+
             <div class="form-group">
                 <label>Nama Karyawan</label>
-                <input type="text" id="nama_karyawan" placeholder="Nama Lengkap">
+                <input type="text" id="nama_karyawan" readonly class="input-readonly">
             </div>
+
+            <!-- Gaya Baru Pilihan Jenis Cuti -->
             <div class="form-group">
-                <label>Tanggal Mulai</label>
-                <input type="date" id="tgl_mulai">
+                <label>Pilih Jenis Cuti</label>
+                <div class="leave-type-selector">
+                    <input type="radio" name="jenis_cuti" id="cuti_tahunan" value="Tahunan" checked>
+                    <label for="cuti_tahunan" class="type-card">
+                        <span class="icon">📅</span>
+                        <span class="text">Cuti Tahunan</span>
+                    </label>
+
+                    <input type="radio" name="jenis_cuti" id="cuti_besar" value="Besar">
+                    <label for="cuti_besar" class="type-card">
+                        <span class="icon">⭐</span>
+                        <span class="text">Cuti Besar</span>
+                    </label>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Mulai</label>
+                    <input type="date" id="tgl_mulai">
+                </div>
+                <div class="form-group">
+                    <label>Selesai</label>
+                    <input type="date" id="tgl_selesai">
+                </div>
+            </div>
+
             <div class="form-group">
                 <label>Alasan</label>
-                <textarea id="alasan" rows="3" placeholder="Contoh: Urusan Keluarga"></textarea>
+                <textarea id="alasan" rows="2" placeholder="Tulis alasan singkat pengajuan cuti"></textarea>
             </div>
-            <button id="btnAjukan">Kirim Pengajuan</button>
+            <button id="btnAjukan" class="btn-main">Kirim Pengajuan</button>
         </div>
 
         <h4>Riwayat Cuti Saya</h4>
@@ -56,8 +105,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Tanggal</th>
-                        <th>Alasan</th>
+                        <th>Nama</th>
+                        <th>Jenis</th>
+                        <th>Durasi</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -72,14 +122,14 @@
             <h3>Panel Admin HRD</h3>
             <button class="btn-logout">Logout</button>
         </div>
-        <h4>Daftar Masuk Pengajuan Cuti</h4>
+        <h4>Daftar Pengajuan Masuk</h4>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
                         <th>Nama</th>
-                        <th>Tanggal</th>
-                        <th>Alasan</th>
+                        <th>Jenis</th>
+                        <th>Durasi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
